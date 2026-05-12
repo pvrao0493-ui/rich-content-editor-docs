@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support - Rich Content Editor for Jira</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f4f5f7; color: #333; }
+
+    header {
+      background: linear-gradient(135deg, #0052CC, #0065FF);
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    header h1 { font-size: 20px; font-weight: 600; }
+    header p { font-size: 13px; opacity: 0.8; }
+
+    nav {
+      background: white;
+      border-bottom: 1px solid #ddd;
+      padding: 0 40px;
+      display: flex;
+      gap: 32px;
+    }
+    nav a {
+      color: #0052CC;
+      text-decoration: none;
+      padding: 14px 0;
+      font-size: 14px;
+      border-bottom: 2px solid transparent;
+      font-weight: 500;
+    }
+    nav a:hover, nav a.active { border-bottom-color: #0052CC; }
+
+    .container { max-width: 860px; margin: 40px auto; padding: 0 20px; }
+
+    .card {
+      background: white;
+      border-radius: 8px;
+      padding: 36px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+      margin-bottom: 24px;
+    }
+
+    h2 { font-size: 24px; color: #0052CC; margin-bottom: 16px; }
+    h3 { font-size: 18px; color: #172B4D; margin: 24px 0 12px; }
+    p { line-height: 1.7; color: #555; margin-bottom: 12px; font-size: 15px; }
+    ul { margin: 12px 0 12px 24px; }
+    li { line-height: 1.8; color: #555; font-size: 15px; }
+
+    .support-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin: 24px 0;
+    }
+    .support-card {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 24px;
+      text-align: center;
+    }
+    .support-icon { font-size: 36px; margin-bottom: 12px; }
+    .support-card h4 { font-size: 16px; color: #172B4D; margin-bottom: 8px; }
+    .support-card p { font-size: 13px; color: #666; margin-bottom: 16px; }
+    .support-card a {
+      display: inline-block;
+      background: #0052CC;
+      color: white;
+      padding: 8px 20px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-size: 14px;
+    }
+    .support-card a:hover { background: #0065FF; }
+
+    .error-item {
+      border: 1px solid #eee;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 16px;
+    }
+    .error-title { font-size: 15px; font-weight: 600; color: #BF2600; margin-bottom: 8px; }
+    .error-solution { font-size: 14px; color: #555; }
+    .error-solution strong { color: #006644; }
+
+    footer {
+      background: #172B4D;
+      color: #aaa;
+      text-align: center;
+      padding: 24px;
+      font-size: 13px;
+      margin-top: 60px;
+    }
+    footer a { color: #4C9AFF; text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>⚡ Rich Content Editor for Jira</h1>
+    <p>Fix HTML formatting issues in Jira Cloud descriptions</p>
+  </div>
+</header>
+
+<nav>
+  <a href="index.html">Documentation</a>
+  <a href="privacy.html">Privacy Policy</a>
+  <a href="support.html" class="active">Support</a>
+</nav>
+
+<div class="container">
+
+  <div class="card">
+    <h2>Support Center</h2>
+    <p>We're here to help! Choose the best way to get support for Rich Content Editor.</p>
+
+    <div class="support-grid">
+      <div class="support-card">
+        <div class="support-icon">📧</div>
+        <h4>Email Support</h4>
+        <p>Send us an email and we'll respond within 24 hours on business days.</p>
+        <a href="mailto:support@richcontenteditor.com">Email Us</a>
+      </div>
+      <div class="support-card">
+        <div class="support-icon">📖</div>
+        <h4>Documentation</h4>
+        <p>Read our detailed documentation for setup guides and feature explanations.</p>
+        <a href="index.html">View Docs</a>
+      </div>
+      <div class="support-card">
+        <div class="support-icon">🐛</div>
+        <h4>Report a Bug</h4>
+        <p>Found a bug? Let us know and we'll fix it as quickly as possible.</p>
+        <a href="mailto:bugs@richcontenteditor.com">Report Bug</a>
+      </div>
+      <div class="support-card">
+        <div class="support-icon">💡</div>
+        <h4>Feature Request</h4>
+        <p>Have an idea for a new feature? We'd love to hear from you!</p>
+        <a href="mailto:features@richcontenteditor.com">Request Feature</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Common Issues & Solutions</h2>
+
+    <div class="error-item">
+      <div class="error-title">❌ "You don't have access to this app"</div>
+      <div class="error-solution"><strong>Solution:</strong> This happens when the development version is installed. Ask your Jira admin to install the production version from the Atlassian Marketplace.</div>
+    </div>
+
+    <div class="error-item">
+      <div class="error-title">❌ Panel not showing in issue view</div>
+      <div class="error-solution"><strong>Solution:</strong> Click the gear icon ⚙️ at the top of the issue and select "Rich Content Editor" from the dropdown menu.</div>
+    </div>
+
+    <div class="error-item">
+      <div class="error-title">❌ "Content OK" but description still shows HTML</div>
+      <div class="error-solution"><strong>Solution:</strong> Hard refresh the page with Cmd+Shift+R (Mac) or Ctrl+Shift+R (Windows). The fix may have already been applied.</div>
+    </div>
+
+    <div class="error-item">
+      <div class="error-title">❌ Fix button not working</div>
+      <div class="error-solution"><strong>Solution:</strong> Ensure you have edit permissions on the issue. The app respects Jira's permission model — only users with edit access can fix descriptions.</div>
+    </div>
+
+    <div class="error-item">
+      <div class="error-title">❌ App shows loading spinner but doesn't load</div>
+      <div class="error-solution"><strong>Solution:</strong> Try refreshing the page. If the issue persists, contact support with the issue key and your Jira site URL.</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Contact Information</h2>
+    <ul>
+      <li><strong>General Support:</strong> support@richcontenteditor.com</li>
+      <li><strong>Bug Reports:</strong> bugs@richcontenteditor.com</li>
+      <li><strong>Feature Requests:</strong> features@richcontenteditor.com</li>
+      <li><strong>Response Time:</strong> Within 24 hours on business days</li>
+      <li><strong>Support Hours:</strong> Monday - Friday, 9AM - 6PM IST</li>
+    </ul>
+  </div>
+
+</div>
+
+<footer>
+  <p>© 2026 Rich Content Editor for Jira. Built on <a href="https://developer.atlassian.com/platform/forge/">Atlassian Forge</a>.</p>
+  <p style="margin-top:8px"><a href="index.html">Documentation</a> · <a href="privacy.html">Privacy Policy</a> · <a href="support.html">Support</a></p>
+</footer>
+
+</body>
+</html>

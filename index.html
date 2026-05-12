@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documentation - Rich Content Editor for Jira</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f4f5f7; color: #333; }
+
+    header {
+      background: linear-gradient(135deg, #0052CC, #0065FF);
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    header h1 { font-size: 20px; font-weight: 600; }
+    header p { font-size: 13px; opacity: 0.8; }
+
+    nav {
+      background: white;
+      border-bottom: 1px solid #ddd;
+      padding: 0 40px;
+      display: flex;
+      gap: 32px;
+    }
+    nav a {
+      color: #0052CC;
+      text-decoration: none;
+      padding: 14px 0;
+      font-size: 14px;
+      border-bottom: 2px solid transparent;
+      font-weight: 500;
+    }
+    nav a:hover, nav a.active { border-bottom-color: #0052CC; }
+
+    .hero {
+      background: linear-gradient(135deg, #0052CC, #0065FF);
+      color: white;
+      padding: 60px 40px;
+      text-align: center;
+    }
+    .hero h2 { font-size: 36px; margin-bottom: 16px; }
+    .hero p { font-size: 18px; opacity: 0.9; max-width: 600px; margin: 0 auto 32px; }
+    .hero-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.2);
+      padding: 8px 20px;
+      border-radius: 20px;
+      font-size: 14px;
+      margin: 4px;
+    }
+
+    .container { max-width: 960px; margin: 40px auto; padding: 0 20px; }
+
+    .card {
+      background: white;
+      border-radius: 8px;
+      padding: 36px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+      margin-bottom: 24px;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin: 24px 0;
+    }
+    .feature-card {
+      background: #F4F5F7;
+      border-radius: 8px;
+      padding: 24px;
+      text-align: center;
+    }
+    .feature-icon { font-size: 32px; margin-bottom: 12px; }
+    .feature-card h4 { font-size: 15px; color: #172B4D; margin-bottom: 8px; }
+    .feature-card p { font-size: 13px; color: #666; line-height: 1.5; }
+
+    h2 { font-size: 24px; color: #0052CC; margin-bottom: 8px; }
+    h3 { font-size: 18px; color: #172B4D; margin: 24px 0 12px; }
+    p { line-height: 1.7; color: #555; margin-bottom: 12px; font-size: 15px; }
+    ul, ol { margin: 12px 0 12px 24px; }
+    li { line-height: 1.8; color: #555; font-size: 15px; margin-bottom: 4px; }
+
+    .step {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 24px;
+      align-items: flex-start;
+    }
+    .step-number {
+      width: 36px;
+      height: 36px;
+      background: #0052CC;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+    .step-content h4 { font-size: 16px; color: #172B4D; margin-bottom: 4px; }
+    .step-content p { margin: 0; font-size: 14px; }
+
+    .before-after {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin: 20px 0;
+    }
+    .before, .after {
+      border-radius: 8px;
+      padding: 20px;
+    }
+    .before { background: #FFEBE6; border: 1px solid #FF5630; }
+    .after { background: #E3FCEF; border: 1px solid #00875A; }
+    .before h4 { color: #BF2600; margin-bottom: 8px; }
+    .after h4 { color: #006644; margin-bottom: 8px; }
+    .before code, .after code {
+      font-family: 'Courier New', monospace;
+      font-size: 13px;
+      display: block;
+      line-height: 1.6;
+    }
+
+    .faq-item { margin-bottom: 20px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+    .faq-item h4 { font-size: 15px; color: #172B4D; margin-bottom: 8px; }
+
+    .permissions-table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+    .permissions-table th { background: #0052CC; color: white; padding: 12px 16px; text-align: left; font-size: 14px; }
+    .permissions-table td { padding: 12px 16px; border-bottom: 1px solid #eee; font-size: 14px; color: #555; }
+    .permissions-table tr:hover td { background: #F4F5F7; }
+
+    .highlight {
+      background: #E3F2FD;
+      border-left: 4px solid #0052CC;
+      padding: 16px 20px;
+      border-radius: 4px;
+      margin: 20px 0;
+    }
+
+    footer {
+      background: #172B4D;
+      color: #aaa;
+      text-align: center;
+      padding: 24px;
+      font-size: 13px;
+      margin-top: 60px;
+    }
+    footer a { color: #4C9AFF; text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>⚡ Rich Content Editor for Jira</h1>
+    <p>Fix HTML formatting issues in Jira Cloud descriptions</p>
+  </div>
+</header>
+
+<nav>
+  <a href="index.html" class="active">Documentation</a>
+  <a href="privacy.html">Privacy Policy</a>
+  <a href="support.html">Support</a>
+</nav>
+
+<!-- Hero -->
+<div class="hero">
+  <h2>Rich Content Editor for Jira</h2>
+  <p>Automatically detect and fix HTML formatting issues in Jira Cloud issue descriptions caused by Data Center to Cloud migration.</p>
+  <span class="hero-badge">✅ Built on Atlassian Forge</span>
+  <span class="hero-badge">🔒 Privacy First</span>
+  <span class="hero-badge">⚡ One-Click Fix</span>
+</div>
+
+<div class="container">
+
+  <!-- Features -->
+  <div class="card">
+    <h2>Key Features</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">🔍</div>
+        <h4>Auto Detection</h4>
+        <p>Automatically detects raw HTML tags in any Jira issue description</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">⚡</div>
+        <h4>One-Click Fix</h4>
+        <p>Fix HTML formatting with a single click — no manual editing needed</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">👁️</div>
+        <h4>Preview Before Fix</h4>
+        <p>See rendered content and cleaned preview before making changes</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔒</div>
+        <h4>Safe & Secure</h4>
+        <p>No changes made until you explicitly click the Fix button</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">☁️</div>
+        <h4>Cloud Native</h4>
+        <p>Built on Atlassian Forge — runs entirely within Atlassian infrastructure</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🚀</div>
+        <h4>Migration Ready</h4>
+        <p>Perfect for teams migrating from Jira Data Center to Cloud</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Problem -->
+  <div class="card">
+    <h2>The Problem It Solves</h2>
+    <p>When migrating from <strong>Jira Data Center to Cloud</strong>, issue descriptions often contain raw HTML tags that display as plain text instead of formatted content.</p>
+
+    <div class="before-after">
+      <div class="before">
+        <h4>❌ Before (Broken)</h4>
+        <code>&lt;p dir="auto"&gt;Operation Logs&lt;/p&gt;</code>
+        <code>&lt;p dir="auto"&gt;VU logs&lt;/p&gt;</code>
+        <code>&lt;b&gt;Bold text&lt;/b&gt;</code>
+        <code>&lt;br&gt;Line break</code>
+      </div>
+      <div class="after">
+        <h4>✅ After (Fixed)</h4>
+        <code>Operation Logs</code>
+        <code>VU logs</code>
+        <code>Bold text</code>
+        <code>Line break</code>
+      </div>
+    </div>
+  </div>
+
+  <!-- How to Use -->
+  <div class="card">
+    <h2>How to Use</h2>
+
+    <div class="step">
+      <div class="step-number">1</div>
+      <div class="step-content">
+        <h4>Open any Jira Issue</h4>
+        <p>Navigate to any Jira issue that may have HTML formatting issues in the description.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-number">2</div>
+      <div class="step-content">
+        <h4>Click the Gear Icon ⚙️</h4>
+        <p>Click the gear/apps icon at the top of the issue to see installed apps.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-number">3</div>
+      <div class="step-content">
+        <h4>Select "Rich Content Editor"</h4>
+        <p>Click on "Rich Content Editor" from the apps dropdown menu.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-number">4</div>
+      <div class="step-content">
+        <h4>Check the Status Badge</h4>
+        <p>The panel shows either "Content OK" (no issues) or "HTML Issue Detected" (needs fixing).</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-number">5</div>
+      <div class="step-content">
+        <h4>Click "Fix Description Now"</h4>
+        <p>If HTML issues are detected, click the Fix button to automatically convert HTML to proper formatting.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Permissions -->
+  <div class="card">
+    <h2>Required Permissions</h2>
+    <p>The app requires the following Jira permissions to function:</p>
+    <table class="permissions-table">
+      <tr>
+        <th>Permission</th>
+        <th>Purpose</th>
+      </tr>
+      <tr>
+        <td><code>read:jira-work</code></td>
+        <td>Read issue descriptions to detect HTML formatting issues</td>
+      </tr>
+      <tr>
+        <td><code>write:jira-work</code></td>
+        <td>Update issue descriptions when user clicks "Fix Description Now"</td>
+      </tr>
+      <tr>
+        <td><code>read:jira-user</code></td>
+        <td>Verify user authentication within the Atlassian platform</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- FAQ -->
+  <div class="card">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <h4>Will the app modify my issues automatically?</h4>
+      <p>No. The app only reads issue data when you open the panel. Changes are only made when you explicitly click the "Fix Description Now" button.</p>
+    </div>
+
+    <div class="faq-item">
+      <h4>Is my data safe?</h4>
+      <p>Yes. The app is built on Atlassian Forge and all processing happens within Atlassian's secure infrastructure. No data is stored or sent outside your Atlassian instance.</p>
+    </div>
+
+    <div class="faq-item">
+      <h4>Which issue types does it work with?</h4>
+      <p>The app works with all Jira Cloud issue types — Bugs, Stories, Tasks, Epics, Sub-tasks, and custom issue types.</p>
+    </div>
+
+    <div class="faq-item">
+      <h4>Can I undo the fix?</h4>
+      <p>Yes. All changes are tracked in Jira's issue history. You can view previous versions and restore them using Jira's built-in version history.</p>
+    </div>
+
+    <div class="faq-item">
+      <h4>Does it work with all Jira Cloud projects?</h4>
+      <p>Yes. The app works with all Jira Cloud project types — Scrum, Kanban, and Business projects.</p>
+    </div>
+
+    <div class="faq-item">
+      <h4>Who can use the Fix button?</h4>
+      <p>Any user with edit permissions on the issue can use the Fix button. The app respects Jira's existing permission model.</p>
+    </div>
+  </div>
+
+  <!-- Support -->
+  <div class="card">
+    <h2>Need Help?</h2>
+    <div class="highlight">
+      <p>📧 Contact us at <a href="mailto:support@richcontenteditor.com" style="color:#0052CC">support@richcontenteditor.com</a> or visit our <a href="support.html" style="color:#0052CC">Support Page</a></p>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <p>© 2026 Rich Content Editor for Jira. Built on <a href="https://developer.atlassian.com/platform/forge/">Atlassian Forge</a>.</p>
+  <p style="margin-top:8px"><a href="index.html">Documentation</a> · <a href="privacy.html">Privacy Policy</a> · <a href="support.html">Support</a></p>
+</footer>
+
+</body>
+</html>

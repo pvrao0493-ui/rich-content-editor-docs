@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - Rich Content Editor for Jira</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f4f5f7; color: #333; }
+
+    /* Header */
+    header {
+      background: linear-gradient(135deg, #0052CC, #0065FF);
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    header img { width: 40px; height: 40px; }
+    header h1 { font-size: 20px; font-weight: 600; }
+    header p { font-size: 13px; opacity: 0.8; }
+
+    nav {
+      background: white;
+      border-bottom: 1px solid #ddd;
+      padding: 0 40px;
+      display: flex;
+      gap: 32px;
+    }
+    nav a {
+      color: #0052CC;
+      text-decoration: none;
+      padding: 14px 0;
+      font-size: 14px;
+      border-bottom: 2px solid transparent;
+      font-weight: 500;
+    }
+    nav a:hover, nav a.active { border-bottom-color: #0052CC; }
+
+    .container { max-width: 860px; margin: 40px auto; padding: 0 20px; }
+
+    .card {
+      background: white;
+      border-radius: 8px;
+      padding: 40px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+      margin-bottom: 24px;
+    }
+
+    h2 { font-size: 28px; color: #0052CC; margin-bottom: 8px; }
+    .subtitle { color: #666; font-size: 14px; margin-bottom: 32px; }
+    h3 { font-size: 18px; color: #172B4D; margin: 28px 0 12px; }
+    p { line-height: 1.7; color: #555; margin-bottom: 12px; font-size: 15px; }
+    ul { margin: 12px 0 12px 24px; }
+    li { line-height: 1.8; color: #555; font-size: 15px; }
+
+    .highlight {
+      background: #E3F2FD;
+      border-left: 4px solid #0052CC;
+      padding: 16px 20px;
+      border-radius: 4px;
+      margin: 20px 0;
+    }
+    .highlight p { margin: 0; color: #0052CC; font-weight: 500; }
+
+    .badge {
+      display: inline-block;
+      background: #E3FCEF;
+      color: #006644;
+      padding: 4px 12px;
+      border-radius: 12px;
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    .last-updated {
+      color: #999;
+      font-size: 13px;
+      margin-top: 32px;
+      padding-top: 16px;
+      border-top: 1px solid #eee;
+    }
+
+    footer {
+      background: #172B4D;
+      color: #aaa;
+      text-align: center;
+      padding: 24px;
+      font-size: 13px;
+      margin-top: 60px;
+    }
+    footer a { color: #4C9AFF; text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>⚡ Rich Content Editor for Jira</h1>
+    <p>Fix HTML formatting issues in Jira Cloud descriptions</p>
+  </div>
+</header>
+
+<nav>
+  <a href="index.html">Documentation</a>
+  <a href="privacy.html" class="active">Privacy Policy</a>
+  <a href="support.html">Support</a>
+</nav>
+
+<div class="container">
+  <div class="card">
+    <span class="badge">✅ Privacy First</span>
+    <h2>Privacy Policy</h2>
+    <p class="subtitle">Last updated: May 12, 2026</p>
+
+    <div class="highlight">
+      <p>🔒 Rich Content Editor does NOT collect, store, or share any personal data. All processing happens within your Atlassian instance.</p>
+    </div>
+
+    <h3>1. Overview</h3>
+    <p>Rich Content Editor ("the App") is a Jira Cloud app built on the Atlassian Forge platform. This Privacy Policy explains how the App handles data when installed on your Atlassian instance.</p>
+
+    <h3>2. Data We Access</h3>
+    <p>The App accesses the following data solely to provide its functionality:</p>
+    <ul>
+      <li><strong>Issue descriptions</strong> — To detect and fix raw HTML formatting issues</li>
+      <li><strong>Issue summaries</strong> — To display the issue title in the panel</li>
+      <li><strong>User identity</strong> — To verify the user is authenticated (via Atlassian)</li>
+    </ul>
+
+    <h3>3. Data We Do NOT Collect</h3>
+    <ul>
+      <li>We do NOT store any issue data outside your Atlassian instance</li>
+      <li>We do NOT collect personal information (name, email, phone)</li>
+      <li>We do NOT use cookies or tracking technologies</li>
+      <li>We do NOT share data with third parties</li>
+      <li>We do NOT send data to external servers</li>
+      <li>We do NOT log user activity</li>
+    </ul>
+
+    <h3>4. How Data Is Processed</h3>
+    <p>All data processing occurs entirely within the Atlassian Forge platform:</p>
+    <ul>
+      <li>The App reads issue description content via Jira REST API</li>
+      <li>HTML detection and conversion happens within Forge's secure runtime</li>
+      <li>Fixed content is written back to your Jira instance via Jira REST API</li>
+      <li>No data leaves the Atlassian infrastructure</li>
+    </ul>
+
+    <h3>5. Atlassian Forge Platform</h3>
+    <p>This App is built on Atlassian Forge, which means:</p>
+    <ul>
+      <li>All code runs within Atlassian's secure cloud infrastructure</li>
+      <li>Data is processed according to Atlassian's security standards</li>
+      <li>The App complies with Atlassian's security requirements</li>
+    </ul>
+    <p>For more information about Atlassian's data practices, visit: <a href="https://www.atlassian.com/legal/privacy-policy" style="color:#0052CC">Atlassian Privacy Policy</a></p>
+
+    <h3>6. Permissions Required</h3>
+    <p>The App requires the following Jira permissions:</p>
+    <ul>
+      <li><strong>read:jira-work</strong> — To read issue descriptions for HTML detection</li>
+      <li><strong>write:jira-work</strong> — To update issue descriptions when user clicks "Fix"</li>
+      <li><strong>read:jira-user</strong> — To verify user authentication</li>
+    </ul>
+
+    <h3>7. Data Retention</h3>
+    <p>The App does not retain any data. Each interaction is stateless — no data is stored between sessions.</p>
+
+    <h3>8. Security</h3>
+    <p>The App follows security best practices:</p>
+    <ul>
+      <li>Built on Atlassian Forge — a security-reviewed platform</li>
+      <li>No external network calls</li>
+      <li>No data persistence outside Jira</li>
+      <li>Changes only made when user explicitly clicks "Fix Description Now"</li>
+    </ul>
+
+    <h3>9. Children's Privacy</h3>
+    <p>The App is designed for business use and is not directed at children under 13 years of age.</p>
+
+    <h3>10. Changes to This Policy</h3>
+    <p>We may update this Privacy Policy from time to time. We will notify users of any significant changes by updating the "Last updated" date at the top of this policy.</p>
+
+    <h3>11. Contact Us</h3>
+    <p>If you have any questions about this Privacy Policy, please contact us:</p>
+    <ul>
+      <li><strong>Email:</strong> support@venkatappdeveloper.atlassian.net</li>
+      <li><strong>Support Portal:</strong> <a href="support.html" style="color:#0052CC">Click here</a></li>
+    </ul>
+
+    <p class="last-updated">This privacy policy was last updated on May 12, 2026.</p>
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 Rich Content Editor for Jira. Built on <a href="https://developer.atlassian.com/platform/forge/">Atlassian Forge</a>.</p>
+  <p style="margin-top:8px"><a href="index.html">Documentation</a> · <a href="privacy.html">Privacy Policy</a> · <a href="support.html">Support</a></p>
+</footer>
+
+</body>
+</html>
