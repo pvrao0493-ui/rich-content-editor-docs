@@ -160,8 +160,8 @@
 
 <header>
   <div>
-    <h1>⚡ HTML Content Fixer for Jira</h1>
-    <p>Fix HTML formatting issues in Jira Cloud descriptions</p>
+    <h1>🔧 HTML Content Fixer for Jira</h1>
+    <p>Clean and validate HTML content in your Jira descriptions</p>
   </div>
 </header>
 
@@ -171,78 +171,67 @@
   <a href="support.html">Support</a>
 </nav>
 
-<!-- Hero -->
 <div class="hero">
   <h2>HTML Content Fixer for Jira</h2>
-  <p>Automatically detect and fix HTML formatting issues in Jira Cloud issue descriptions caused by Data Center to Cloud migration.</p>
-  <span class="hero-badge">✅ Built on Atlassian Forge</span>
-  <span class="hero-badge">🔒 Privacy First</span>
+  <p>Automatically detect and fix malformed HTML, remove unwanted elements, and maintain consistent formatting across your Jira workspace.</p>
+  <span class="hero-badge">✅ Automatic Detection</span>
   <span class="hero-badge">⚡ One-Click Fix</span>
+  <span class="hero-badge">🛡️ Safe & Secure</span>
 </div>
 
 <div class="container">
 
-  <!-- Features -->
   <div class="card">
     <h2>Key Features</h2>
     <div class="features-grid">
       <div class="feature-card">
         <div class="feature-icon">🔍</div>
         <h4>Auto Detection</h4>
-        <p>Automatically detects raw HTML tags in any Jira issue description</p>
+        <p>Automatically detects malformed HTML tags and structural issues</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">⚡</div>
-        <h4>One-Click Fix</h4>
-        <p>Fix HTML formatting with a single click — no manual editing needed</p>
+        <h4>Instant Fix</h4>
+        <p>Fix HTML with one click - no manual editing required</p>
       </div>
       <div class="feature-card">
-        <div class="feature-icon">👁️</div>
-        <h4>Preview Before Fix</h4>
-        <p>See rendered content and cleaned preview before making changes</p>
+        <div class="feature-icon">📋</div>
+        <h4>Bulk Processing</h4>
+        <p>Process multiple issues at scale in a single operation</p>
       </div>
       <div class="feature-card">
-        <div class="feature-icon">🔒</div>
-        <h4>Safe & Secure</h4>
-        <p>No changes made until you explicitly click the Fix button</p>
+        <div class="feature-icon">✅</div>
+        <h4>HTML5 Validation</h4>
+        <p>Ensures compliance with modern HTML5 standards</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🛡️</div>
+        <h4>Content Preservation</h4>
+        <p>Protects your important content while cleaning HTML</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">☁️</div>
         <h4>Cloud Native</h4>
-        <p>Built on Atlassian Forge — runs entirely within Atlassian infrastructure</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">🚀</div>
-        <h4>Migration Ready</h4>
-        <p>Perfect for teams migrating from Jira Data Center to Cloud</p>
+        <p>Built on Atlassian Forge - secure and reliable</p>
       </div>
     </div>
   </div>
 
-  <!-- Problem -->
   <div class="card">
-    <h2>The Problem It Solves</h2>
-    <p>When migrating from <strong>Jira Data Center to Cloud</strong>, issue descriptions often contain raw HTML tags that display as plain text instead of formatted content.</p>
+    <h2>What It Does</h2>
+    <p>HTML Content Fixer identifies and repairs malformed HTML in your Jira issue descriptions. It removes deprecated tags, fixes broken elements, and ensures your content displays properly.</p>
 
-    <div class="before-after">
-      <div class="before">
-        <h4>❌ Before (Broken)</h4>
-        <code>&lt;p dir="auto"&gt;Operation Logs&lt;/p&gt;</code>
-        <code>&lt;p dir="auto"&gt;VU logs&lt;/p&gt;</code>
-        <code>&lt;b&gt;Bold text&lt;/b&gt;</code>
-        <code>&lt;br&gt;Line break</code>
-      </div>
-      <div class="after">
-        <h4>✅ After (Fixed)</h4>
-        <code>Operation Logs</code>
-        <code>VU logs</code>
-        <code>Bold text</code>
-        <code>Line break</code>
-      </div>
-    </div>
+    <h3>Common Issues It Fixes</h3>
+    <ul>
+      <li>Malformed or broken HTML tags (&lt;div&gt; without closing &lt;/div&gt;)</li>
+      <li>Deprecated HTML elements (outdated formatting)</li>
+      <li>Inline styles and unnecessary attributes</li>
+      <li>Special character encoding issues</li>
+      <li>Nested tag validation errors</li>
+      <li>Whitespace and formatting inconsistencies</li>
+    </ul>
   </div>
 
-  <!-- How to Use -->
   <div class="card">
     <h2>How to Use</h2>
 
@@ -250,107 +239,91 @@
       <div class="step-number">1</div>
       <div class="step-content">
         <h4>Open any Jira Issue</h4>
-        <p>Navigate to any Jira issue that may have HTML formatting issues in the description.</p>
+        <p>Navigate to an issue that may have HTML formatting issues.</p>
       </div>
     </div>
 
     <div class="step">
       <div class="step-number">2</div>
       <div class="step-content">
-        <h4>Click the Gear Icon ⚙️</h4>
-        <p>Click the gear/apps icon at the top of the issue to see installed apps.</p>
+        <h4>Open the App</h4>
+        <p>Click the gear icon ⚙️ and select "HTML Content Fixer" from the apps menu.</p>
       </div>
     </div>
 
     <div class="step">
       <div class="step-number">3</div>
       <div class="step-content">
-        <h4>Select "Rich Content Editor"</h4>
-        <p>Click on "Rich Content Editor" from the apps dropdown menu.</p>
+        <h4>Check Status</h4>
+        <p>The app shows "Content OK" or "HTML Issues Detected".</p>
       </div>
     </div>
 
     <div class="step">
       <div class="step-number">4</div>
       <div class="step-content">
-        <h4>Check the Status Badge</h4>
-        <p>The panel shows either "Content OK" (no issues) or "HTML Issue Detected" (needs fixing).</p>
+        <h4>Fix</h4>
+        <p>Click "Fix Description Now" to automatically clean the HTML.</p>
       </div>
     </div>
 
     <div class="step">
       <div class="step-number">5</div>
       <div class="step-content">
-        <h4>Click "Fix Description Now"</h4>
-        <p>If HTML issues are detected, click the Fix button to automatically convert HTML to proper formatting.</p>
+        <h4>Done</h4>
+        <p>Changes are saved instantly. Your description is now clean!</p>
       </div>
     </div>
   </div>
 
-  <!-- Permissions -->
   <div class="card">
-    <h2>Required Permissions</h2>
-    <p>The app requires the following Jira permissions to function:</p>
-    <table class="permissions-table">
-      <tr>
-        <th>Permission</th>
-        <th>Purpose</th>
-      </tr>
-      <tr>
-        <td><code>read:jira-work</code></td>
-        <td>Read issue descriptions to detect HTML formatting issues</td>
-      </tr>
-      <tr>
-        <td><code>write:jira-work</code></td>
-        <td>Update issue descriptions when user clicks "Fix Description Now"</td>
-      </tr>
-      <tr>
-        <td><code>read:jira-user</code></td>
-        <td>Verify user authentication within the Atlassian platform</td>
-      </tr>
-    </table>
+    <h2>Permissions Required</h2>
+    <p>The app requires these permissions:</p>
+    <ul>
+      <li><strong>read:jira-work</strong> — To read issue descriptions and detect HTML issues</li>
+      <li><strong>write:jira-work</strong> — To update descriptions when you click "Fix"</li>
+      <li><strong>read:jira-user</strong> — To verify user authentication</li>
+    </ul>
   </div>
 
-  <!-- FAQ -->
   <div class="card">
     <h2>Frequently Asked Questions</h2>
 
     <div class="faq-item">
-      <h4>Will the app modify my issues automatically?</h4>
-      <p>No. The app only reads issue data when you open the panel. Changes are only made when you explicitly click the "Fix Description Now" button.</p>
+      <h4>Will the app modify issues automatically?</h4>
+      <p>No. The app only makes changes when you explicitly click the "Fix Description Now" button.</p>
     </div>
 
     <div class="faq-item">
       <h4>Is my data safe?</h4>
-      <p>Yes. The app is built on Atlassian Forge and all processing happens within Atlassian's secure infrastructure. No data is stored or sent outside your Atlassian instance.</p>
+      <p>Yes. The app is built on Atlassian Forge and all processing happens within Atlassian's secure infrastructure. No data is stored outside your instance.</p>
     </div>
 
     <div class="faq-item">
       <h4>Which issue types does it work with?</h4>
-      <p>The app works with all Jira Cloud issue types — Bugs, Stories, Tasks, Epics, Sub-tasks, and custom issue types.</p>
+      <p>The app works with all Jira Cloud issue types - Bugs, Stories, Tasks, Epics, and custom types.</p>
     </div>
 
     <div class="faq-item">
-      <h4>Can I undo the fix?</h4>
-      <p>Yes. All changes are tracked in Jira's issue history. You can view previous versions and restore them using Jira's built-in version history.</p>
+      <h4>Can I undo a fix?</h4>
+      <p>Yes. All changes appear in Jira's issue history. You can restore previous versions if needed.</p>
     </div>
 
     <div class="faq-item">
-      <h4>Does it work with all Jira Cloud projects?</h4>
-      <p>Yes. The app works with all Jira Cloud project types — Scrum, Kanban, and Business projects.</p>
+      <h4>Does it work with bulk operations?</h4>
+      <p>Yes. v2.3.0 supports processing multiple issues through Jira filters.</p>
     </div>
 
     <div class="faq-item">
       <h4>Who can use the Fix button?</h4>
-      <p>Any user with edit permissions on the issue can use the Fix button. The app respects Jira's existing permission model.</p>
+      <p>Any user with edit permissions on the issue can use the Fix button.</p>
     </div>
   </div>
 
-  <!-- Support -->
   <div class="card">
     <h2>Need Help?</h2>
     <div class="highlight">
-      <p>📧 Contact us at <a href="mailto:support@richcontenteditor.com" style="color:#0052CC">support@richcontenteditor.com</a> or visit our <a href="support.html" style="color:#0052CC">Support Page</a></p>
+      <p>📧 Contact us at <a href="mailto:pvrao0493@gmail.com" style="color:#0052CC">pvrao0493@gmail.com</a> or visit our <a href="support.html" style="color:#0052CC">Support Page</a></p>
     </div>
   </div>
 
